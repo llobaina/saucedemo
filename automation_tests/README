@@ -1,0 +1,8 @@
+Correr los casos de pueba
+npx cypress run
+
+Comando para los reportes
+npx allure serve allure-results
+
+Para cuando no se tiene instalado el allure
+npx allure-commandline serve

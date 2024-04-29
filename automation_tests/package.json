@@ -1,0 +1,20 @@
+{
+  "name": "test1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Laritza Lopez Lobaina",
+  "license": "ISC",
+  "devDependencies": {
+    "allure-commandline": "^2.29.0",
+    "allure-cypress": "^2.15.1",
+    "cypress": "^13.8.1",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
