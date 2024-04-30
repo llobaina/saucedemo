@@ -24,5 +24,19 @@ declare namespace Cypress {
      */
     getBySel(dataTestAttribute: string, args?: any): Chainable<JQuery<HTMLElement>>;
 
+
+    /**
+     * Get a DOM element base on attribute data-test's value
+     * @param dataTestAttribute part of the value of the attribute
+     * @param args
+     * @example
+     * // this command
+     * cy.getBySelLike("remove")
+     * // will selected this element
+     * <input data-test="remove-sauce-labs-backpack">
+     */
+    getBySelLike(dataTestPrefixAttribute: string, args?: any): Chainable<JQuery<HTMLElement>>;
+
+
   }
 }

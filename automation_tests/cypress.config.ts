@@ -8,6 +8,7 @@ dotenv.config();
 
 
 export default defineConfig({
+  projectId: "u692a4",
   env: {
     user_name: process.env.USER_NAME,
     password: process.env.PASSWORD

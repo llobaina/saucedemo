@@ -29,6 +29,10 @@ Cypress.Commands.add("getBySel", (selector, ...args) => {
     return cy.get(`[data-test=${selector}]`, ...args);
 });
 
+Cypress.Commands.add("getBySelLike", (selector, ...args) => {
+    return cy.get(`[data-test*=${selector}]`, ...args);
+});
+
 Cypress.Commands.add('login', (username=Cypress.env("user_name"), password=Cypress.env("password")) => {
     expect(username,"username was set").to.be.a("string").and.not.be.empty
     if (typeof password !== "string" || !password) {
@@ -40,10 +44,11 @@ Cypress.Commands.add('login', (username=Cypress.env("user_name"), password=Cypre
             cy.visit("/")
             cy.get("#user-name").type(username)
             cy.get("#password").type(`${password}{enter}`, { log: false })
+            cy.url().should('contain', '/inventory.html')
         },
         {
             validate: () => {
-                cy.url().should("include", "/inventory.html")
+                cy.visit('/inventory.html', { failOnStatusCode: false })
             },
         }
     )
